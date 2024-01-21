@@ -37,21 +37,38 @@ normalize them, and format them as URI:
 API
 ---
 
-This module exports an object that holds these methods:
-
-### .validateBareDoi(input)
-
-:TODO:
+This module exports an object that holds these properties and methods:
 
 
-### .toBare(doi)
+### .doiNsBaseUri
 
-:TODO:
+A string with the author's latest recommended prefix for constructing
+a URI from a bare DOI.
+Currently, in violation of the DOI handbook, it is: https://doi.org/
 
 
-### .toURI(doi)
+### .whyNotBareDoi(input)
 
-:TODO:
+If `input` is a string with a bare DOI (10.xxx/xxx), return `false`.
+Otherwise, return an Error object describing a failed expectation.
+
+
+### .expectBareDoi(input)
+
+If `.whyNotBareDoi(input)` has a complaint, `throw` it.
+Otherwise, return `input`.
+
+
+### .toBare(input)
+
+Remove known namespace identifier prefixes from a DOI URI,
+and validate (`.expectBareDoi`) the remaining text.
+
+
+### .toUri(doi)
+
+Convert any understood representation of a DOI
+to the recommended URI for that DOI.
 
 
 

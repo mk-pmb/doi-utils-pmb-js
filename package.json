@@ -1,5 +1,5 @@
 { "name": "doi-utils-pmb",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Validate and normalize a Digital Object Identifier (DOI).",
   "keywords": [
     "Digital Object Identifier",
@@ -30,7 +30,10 @@
     "eslint-plugin-json-light-pmb": "^1.0.7",
     "eslint-plugin-n": "^15.2.4",
     "eslint-pretty-pmb": "^1.0.5",
-    "nodemjs": "^0.1.14"
+    "nodemjs": "^0.1.14",
+    "p-fatal": "^0.1.5",
+    "p-tape": "^4.0.2",
+    "usnam-pmb": "^0.2.5"
   },
 
 
